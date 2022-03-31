@@ -1,3 +1,5 @@
+import pygame
+
 class snake():
     #konstruktor klasy
     def __init__(self):
@@ -10,3 +12,8 @@ class snake():
         self.dlugosc+=1
         self.punkty+=1
     def drawSnake(self):
+        for wspolrzendne in self.pozycje[::-1]:
+            wazShape = pygame.Rect((wspolrzendne[0],
+            wspolrzendne[1]), (40, 40))
+            pygame.draw.rect(OknoGry, (255, 192, 203),
+            wazShape)
